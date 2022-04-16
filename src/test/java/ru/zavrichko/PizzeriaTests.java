@@ -25,9 +25,9 @@ public class PizzeriaTests extends TestBase {
     @Feature("Покупка")
     @Story("Покупка")
     void payTest() {
-        var username = "sel" + LocalDateTime.now().format(DateTimeFormatter.ofPattern("MMddHHmmss"));
-        var email = username + "@ya.ru";
-        var nextDate = LocalDate.now().plusDays(1).format(DateTimeFormatter.ofPattern("ddMMyyyy"));
+        String username = "sel" + LocalDateTime.now().format(DateTimeFormatter.ofPattern("MMddHHmmss"));
+        String email = username + "@ya.ru";
+        String nextDate = LocalDate.now().plusDays(1).format(DateTimeFormatter.ofPattern("ddMMyyyy"));
         step("Открыть сайт", () -> open(baseUrl));
         step("Перейти на страницу Пицца", () ->
             new Menu().openPizzaMenu());
@@ -112,9 +112,9 @@ public class PizzeriaTests extends TestBase {
     @Story("Промо")
     @TmsLink("CLOUD-10918")
     void promoDoubleTest() {
-        var username = "sel" + LocalDateTime.now().format(DateTimeFormatter.ofPattern("MMddHHmmss"));
-        var email = username + "@ya.ru";
-        var nextDate = LocalDate.now().plusDays(1).format(DateTimeFormatter.ofPattern("ddMMyyyy"));
+        String username = "sel" + LocalDateTime.now().format(DateTimeFormatter.ofPattern("MMddHHmmss"));
+        String email = username + "@ya.ru";
+        String nextDate = LocalDate.now().plusDays(1).format(DateTimeFormatter.ofPattern("ddMMyyyy"));
         step("Открыть сайт", () -> open(baseUrl));
         step("Открыть акции", () ->
             new Menu().openMenu("Акции"));
