@@ -15,7 +15,7 @@ public class TestBase {
         Configuration.baseUrl = "http://pizzeria.skillbox.cc/";
         Configuration.startMaximized = true;
         String url = System.getProperty("url");
-        String remoteUrl = "https://" + url;
+        String remoteUrl = "http://" + url;
         Configuration.remote = remoteUrl;
         String browser = System.getProperty("browser");
         Configuration.browser = browser;
@@ -29,9 +29,9 @@ public class TestBase {
 
     @AfterEach
     public void addAttachments() {
-        AllureAttachments.addScreenshotAs("Last screenshot");
-        AllureAttachments.addPageSource();
-        AllureAttachments.addBrowserConsoleLogs();
+//        AllureAttachments.addScreenshotAs("Last screenshot");
+//        AllureAttachments.addPageSource();
+//        AllureAttachments.addBrowserConsoleLogs();
         Selenide.closeWebDriver();
 
     }
