@@ -14,15 +14,15 @@ public class TestBase {
     static void setUp() {
         Configuration.baseUrl = "http://pizzeria.skillbox.cc/";
         Configuration.startMaximized = true;
-        String url = System.getProperty("url");
-        String remoteUrl = url;
-        Configuration.remote = remoteUrl;
-        String browser = System.getProperty("browser");
-        Configuration.browser = browser;
+        Configuration.remote = System.getProperty("url");
+        Configuration.browser = System.getProperty("browser");
+        Configuration.browserVersion = System.getProperty("version");
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
+
+
     }
 
     @AfterEach
