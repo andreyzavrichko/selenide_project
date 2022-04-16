@@ -20,8 +20,8 @@ public class TestBase {
      //   Configuration.remote = "http://149.154.70.38:4444/wd/hub";
         String browser = System.getProperty("browser");
         Configuration.browser = browser;
-        String browserVersion = System.getProperty("version");
-        Configuration.browser = browserVersion;
+      // String browserVersion = System.getProperty("version");
+       // Configuration.browser = browserVersion;
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
