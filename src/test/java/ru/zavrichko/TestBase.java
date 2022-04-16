@@ -18,10 +18,10 @@ public class TestBase {
         String remoteUrl = url;
         Configuration.remote = remoteUrl;
      //   Configuration.remote = "http://149.154.70.38:4444/wd/hub";
-       // String browser = System.getProperty("browser");
-       // Configuration.browser = browser;
-       // String browserVersion = System.getProperty("browserVersion");
-       // Configuration.browser = browserVersion;
+        String browser = System.getProperty("browser");
+        Configuration.browser = browser;
+        String browserVersion = System.getProperty("version");
+        Configuration.browser = browserVersion;
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
@@ -30,9 +30,9 @@ public class TestBase {
 
     @AfterEach
     public void addAttachments() {
-//        AllureAttachments.addScreenshotAs("Last screenshot");
-//        AllureAttachments.addPageSource();
-//        AllureAttachments.addBrowserConsoleLogs();
+        AllureAttachments.addScreenshotAs("Last screenshot");
+        AllureAttachments.addPageSource();
+        AllureAttachments.addBrowserConsoleLogs();
         Selenide.closeWebDriver();
 
     }
