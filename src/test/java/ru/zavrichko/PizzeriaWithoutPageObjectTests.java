@@ -18,7 +18,7 @@ public class PizzeriaWithoutPageObjectTests extends TestBase {
     @Test
     @Disabled
     void oneTest() {
-        var nextDate = LocalDate.now().plusDays(1).format(DateTimeFormatter.ofPattern("ddMMyyyy"));
+        String nextDate = LocalDate.now().plusDays(1).format(DateTimeFormatter.ofPattern("ddMMyyyy"));
         open(baseUrl);
         // Через меню выбирает пиццы.
         $("#menu-item-389").hover();
@@ -66,8 +66,8 @@ public class PizzeriaWithoutPageObjectTests extends TestBase {
         $("#menu-primary-menu").$(Selectors.byText("Мой аккаунт")).click();
         $(".custom-register-button").click();
         // Там он проходит регистрацию.
-        var username = "sel" + LocalDateTime.now().format(DateTimeFormatter.ofPattern("MMddHHmmss"));
-        var email = username + "@ya.ru";
+        String username = "sel" + LocalDateTime.now().format(DateTimeFormatter.ofPattern("MMddHHmmss"));
+        String email = username + "@ya.ru";
         $("#reg_username").setValue(username);
         $("#reg_email").setValue(email);
         $("#reg_password").setValue("slf5445SFdgfd");
@@ -134,7 +134,7 @@ public class PizzeriaWithoutPageObjectTests extends TestBase {
     @Test
     @Disabled
     void promoDoubleTest() {
-        var nextDate = LocalDate.now().plusDays(1).format(DateTimeFormatter.ofPattern("ddMMyyyy"));
+        String nextDate = LocalDate.now().plusDays(1).format(DateTimeFormatter.ofPattern("ddMMyyyy"));
         open(baseUrl);
         // Зайти на страницу «Акции», проверить текстовую информацию о скидке GIVEMEHALYAVA.
         $("#menu-primary-menu").$(Selectors.byText("Акции")).click();
@@ -142,8 +142,8 @@ public class PizzeriaWithoutPageObjectTests extends TestBase {
         // Создать нового пользователя.
         $("#menu-primary-menu").$(Selectors.byText("Мой аккаунт")).click();
         $(".custom-register-button").click();
-        var username = "sel" + LocalDateTime.now().format(DateTimeFormatter.ofPattern("MMddHHmmss"));
-        var email = username + "@ya.ru";
+        String username = "sel" + LocalDateTime.now().format(DateTimeFormatter.ofPattern("MMddHHmmss"));
+        String email = username + "@ya.ru";
         $("#reg_username").setValue(username);
         $("#reg_email").setValue(email);
         $("#reg_password").setValue("slf5445SFdgfd");
