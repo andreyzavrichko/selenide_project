@@ -1,6 +1,7 @@
 package ru.zavrichko;
 
 import com.codeborne.selenide.Selectors;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
@@ -15,6 +16,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class PizzeriaWithoutPageObjectTests extends TestBase {
     @Test
+    @Disabled
     void oneTest() {
         var nextDate = LocalDate.now().plusDays(1).format(DateTimeFormatter.ofPattern("ddMMyyyy"));
         open(baseUrl);
@@ -102,6 +104,7 @@ public class PizzeriaWithoutPageObjectTests extends TestBase {
     }
 
     @Test
+    @Disabled
     void promoPositiveTest() {
         open(baseUrl);
         $("#menu-item-389").hover();
@@ -115,6 +118,7 @@ public class PizzeriaWithoutPageObjectTests extends TestBase {
     }
 
     @Test
+    @Disabled
     void promoNegativeTest() {
         open(baseUrl);
         $("#menu-item-389").hover();
@@ -128,6 +132,7 @@ public class PizzeriaWithoutPageObjectTests extends TestBase {
     }
 
     @Test
+    @Disabled
     void promoDoubleTest() {
         var nextDate = LocalDate.now().plusDays(1).format(DateTimeFormatter.ofPattern("ddMMyyyy"));
         open(baseUrl);

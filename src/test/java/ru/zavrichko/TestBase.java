@@ -12,7 +12,6 @@ import ru.zavrichko.helpers.AllureAttachments;
 public class TestBase {
     @BeforeAll
     static void setUp() {
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         Configuration.baseUrl = "http://pizzeria.skillbox.cc/";
         Configuration.startMaximized = true;
         String url = System.getProperty("url");
